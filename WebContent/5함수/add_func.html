@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		//두개의 매개변수로 전달받은 값의 합을 구하는 기능의  sum함수 정의
+		function sum(num1, num2){
+			
+			let result = num1 + num2;
+			
+		  //return 함수를 호출한 코드 줄로 계산된 반환할 값;
+			return result;	
+	    //  return  30;	
+		}
+		
+		//100과 200의 합을 구하기 위해   합을 구해서 반환하는 sum함수 호출! 호출시 ~  100과 200을 전달함.
+		//그러면 계산된 합의 값 300을 반환받아 value변수에 저장 시킵니다.
+		let value = sum(100, 200);
+		console.log(value); //300
+		
+		
+		//sum이라는 이름의 함수를 호출!
+		//차례 대로 전달할 인수 10 과 20 이다. 
+		//이렇게 순서대로 전달하면 매개변수num1은 10을 전달받고 매개변수num2은 20을 전달받게 됩니다.
+		console.log( sum(10, 20) );
+						//30
+			
+	</script>
+</body>
+</html>
+
+
+
+
+

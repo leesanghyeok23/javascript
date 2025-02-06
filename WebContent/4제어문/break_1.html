@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		//i변수의 초깃값을 1로 저장하여 
+		//i변수의 값을 1씩 증가 시키면서
+		//i변수의 값이 10보다 작거나 같을때 까지만
+		//숫자 1부터 10 사이의 1 2 3 4 5 까지만 반복해서 출력하고 싶다.
+		for(let i=1;   i<=10;  i++){
+			
+			//i++ 구문으로 1씩 증가시킨 i변수의 값이 6이 되는 순간 
+			//아래의 i변수를 출력하지 않고 for반복문 {  }중괄호영역을 벗어나 종료하자			
+			if(i  === 6){
+				
+				break; //강제로 for{}중괄호를 빠져나감.
+				
+			}//if닫기 
+			
+			document.write(i, "<br>");
+			
+		}//for닫기 
+		
+		document.write("-------------------------------<br>");
+		
+		//위 for반복문을 while반복문 형태로 변경해보기 
+
+        let i=1;
+
+        while(i<=10){   
+        	
+        	//i++ 구문으로 1씩 증가시킨 i변수의 값이 6이 되는 순간 
+			//아래의 i변수를 출력하지 않고 for반복문 {  }중괄호영역을 벗어나 종료하자			
+			if(i  === 6){
+				
+				break; //강제로 while{}중괄호를 빠져나감.
+				
+			}//if닫기 
+			
+			document.write(i, "<br>");
+
+            i++;
+        }
+	
+	
+	</script>
+
+
+
+
+</body>
+</html>
+
+
+

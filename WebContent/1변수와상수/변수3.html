@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>회원가입</h1>
+	<script>
+//주제 :  사용자가 이름, 나이, 연락처를 입력창에 입력하면
+//      let으로 선언된 변수메모리에 각각 저장하고 document.write()사용해서 출력하는 예제
+		
+	//입력창을 3번 띄어 사용자로 부터 이름, 나이, 연락처를 각각 입력받아 변수에 저장
+		//1. 입력창에 입력한 이름을 반환받아 userName이라는 이름의 변수 메모리 선언후 저장	
+		let userName = prompt("이름을 입력하세요");
+		//2. 입력창에 입력한 나이를 반환받아 userAge이라는 이름의 변수 메모리 선언후 저장
+		let userAge = prompt("나이를 입력하세요");
+		//3. 입력창에 입력한 연락처를 반환받아 userContact라는 이름의 변수 메모리 선언후 저장
+		let userContact; //<---변수 선언
+		userContact = prompt("연락처를 입력하세요");
+		
+	
+	//입력받은 각각의 정보들을 document.write구문으로 웹브라우저에 출력
+			document.write("<h1>가입시 입력한 정보</h1>");			
+			document.write("<p>이름:"+ userName + "</p>"   ); //userName변수에 저장된 값 불러와 출력
+						 // "<p>이름:"+ "홍길동"
+						 // "<p>이름:홍길동"      +  "</p>"
+						 // "<p>이름:홍길동</p>"
+						   
+			document.write("<p>나이:" +  userAge +  "</p>"   ); //userAge변수에 저장된 값 불러와 출력
+			document.write("<p>연락처:" , userContact , "</p>"   ); //userContact변수에 저장된 값 불러와 출력
+		//출력형식
+			//가입시 입력한 정보
+			//이름: 홍길동
+			//나이: 25
+			//연락처: 010-1234-5678
+			
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

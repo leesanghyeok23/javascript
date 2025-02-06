@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+/*
+    문제 2: 계절 판별기
+
+    사용자에게 월을 입력받아 해당 월의 계절을 출력하는 프로그램을 작성하세요.
+
+    3~5: "봄"
+    6~8: "여름"
+    9~11: "가을"
+    12, 1, 2: "겨울"
+    
+    
+*/	
+
+		//순서1. prompt함수로 현재월을 입력받아 얻습니다.입력값-> 7  ,  얻는값 ->"7"
+		//순서2. parseInt함수를 호출할떄 첫번쨰 자리에 "7"을 전달하고  두번째자리에 변환할 10진수 값 10 전달
+		//순서3. parseInt함수가 우리개발자에게 "7"->7 로 변환해서 반환후  month변수에 저장 
+		let month = parseInt(prompt("현재 월을 입력하세요:", "0"), 10);
+			//7
+		
+		switch (month) {
+			//month변수에 저장된 입력달 월이    3 또는 4 또는 5와 같으냐?
+		    case 3: case 4: case 5:  // 3 ~ 5 월이면  
+		        document.write("봄");
+		        break;
+		    case 6: case 7: case 8:  //6 ~ 8월이면  
+		        document.write("여름");
+		        break;
+		    case 9: case 10: case 11:
+		        document.write("가을");
+		        break;
+		    case 12: case 1: case 2:
+		        document.write("겨울");
+		        break;
+		    default:
+		        document.write("잘못된 입력입니다.");
+		}	
+	
+	
+	</script>
+
+
+</body>
+</html>
+
+
+

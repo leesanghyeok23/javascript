@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+		//주제 : undefiend 값과  null값 비교
+		
+		//변수선언
+		let variable1; //선언만하고 값을 할당하지 않음  (undefiend)
+		let variable2 = null; //명식적으로 null 값을 할당
+		
+		//값 출력
+		console.log("variavle1:", variable1); //undefiend
+		console.log("variavle2:", variable2); //null
+		
+		//변수에 저장된 값의 타입
+		console.log("Type of variable1 : ", typeof variable1);//undefiend
+		console.log("Type of variable2 : ", typeof variable2);//object
+		
+		//비교 연산
+		console.log(variable1 == variable2);  //true  비어있다 의미는같음
+		console.log(variable1 === variable2); //false 의미는 같아도 데이터유형은 다르다
+		
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

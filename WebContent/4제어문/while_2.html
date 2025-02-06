@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+/*
+    문제 : while반복문을 사용하여 숫자 1부터 ~ 30까지 숫자중에서
+        2의 배수이면서 6의 배수인 숫자만 반복해서 출력
+*/
+		let i = 1;   // 조건식 검사 하는 조건변수 초깃값 1로 저장
+
+      // i -> 1    출력 안함
+      // i -> 2    출력 안함
+      // i -> 3    출력 안함
+      // i -> 4    출력 안함
+      // i -> 5    출력 안함
+      // i -> 6     6
+      // i -> 7    출력 안함
+      //.......
+      // i -> 31   while반복문 {}중괄호 를 빠져나옴		
+		
+		while (i <= 30) {
+			
+			//반복실행될 문장
+			  //2의 배수  이면서     6의 변수 인 경우 에만 i변수의 값 반복해서 출력 
+			if(i % 2 === 0 && i % 6 === 0 ){
+				
+				document.write(i +"<br>");
+			}		
+			
+			i++;   //<-   i = i + 1;          i+=1;
+		}
+	
+	
+	
+	
+	</script>
+
+</body>
+</html>
+
+
+
+
