@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		/*
+			주제1. 사용자 정의 객체 메모리 만들기
+			
+			- 객체는 여러개의 속성:값 형태를 가지고 있습니다.
+				여기서 속성을 키 또는 프로퍼티라는 용어로 불리기도 합니다.
+				
+			- 객체 메모리 생성하는 문법2
+				const 상수 = { 키:값, 키:값}
+			
+			
+		*/
+			const book1 = { title:"웹표준의 정석", page:648 }
+		
+		/*
+			주제2.  객체 메모리의 키(속성)에 대응되는 값을 얻거나 변경하는 방법
+			
+			- 방법1.     .표기법 이용
+			- 방법2.    [] 괄호 표기법 이용
+				
+		*/	
+		// 방법1	객채명.키(속성) -> 객체{}내부에 저장된 키에 저장된 값을 가져오기
+		console.log( book1.title );	
+		// 방법1 	객채명.키(속성)=변경할 값; -> 객체{}내부에 저장된 키에 대응되는 값 변경
+		book1.title = "웹표준의 정석2";
+		console.log( book1.title );	
+		console.log( JSON.stringify(book1) );	
+		
+		// 방법2	[] 이용 		객체명["키"] -> 객체{}내부에 저장된 키에 대응되는 값 가져오기
+		console.log(book1["title"]);
+		// 방법2	[] 이용 		객체명["키"] = 변경할 값;
+		book1["title"]="웹표준의 정석3";
+		console.log( JSON.stringify(book1) );	
+		
+		
+		
+		console.log( "---------------------------------------------" );	
+
+		/*
+		주제3.  키:값 쌍이 없는(비어있는) 객체 메모리 생성한 후 나중에 키 : 값 한쌍씩 추가
+		*/	
+		let book2 = {}
+	//	let book2 = new Object();
+		
+		//book2 비어있는 객체 메모리에 키: 값 한쌍식 넣어 객체 메모리를 수정할 수 있다.
+		book2.title = "JavaScript";
+	//  { title:"JavaScript" };
+		book2.pages = 500;
+	//  { title:"JavaScript", pages:500 };
+		book2.autor = "김개똥";
+	//  { title:"JavaScript", pages:500, autor:"김개똥" };
+		console.log( JSON.stringify(book2) );	
+		// 현재 book2 = {"title":"JavaScript","pages":500,"autor":"김개똥"}
+		
+		/*
+		주제4.  객체 내부에 만들어져 있는 키:값 한쌍을 삭제
+			삭제 문법
+				delete 객체명.키
+		*/			
+		delete book2.pages
+		console.log( JSON.stringify(book2) );	
+		
+		delete book2.autor
+		console.log( JSON.stringify(book2) );	
+		
+		delete book2.title
+		console.log( JSON.stringify(book2) );	
+
+		console.log( "---------------------------------------------" );	
+		
+		/*
+		주제5.  객체 중첩하기 (객체 메모리안에 키:값(내부객체 삽입 가능))		
+		*/			
+
+		let student = {
+						name:"Doremi",
+						score:{
+							history:85,
+							science:94,
+							average:function(){
+								return (this.history + this.science) / 2
+							}
+							  },
+						age:33
+						
+					  }
+					//바깥객체명.키.안쪽키
+			console.log(student.score.history);
+					
+					//바깥객체명.키.안쪽키()
+			console.log(student.score.average());
+		
+		
+	</script>
+
+
+
+</body>
+</html>
