@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//location객체에서 제공하는 href속성
+		//- href속성을 호출하면 웹브라우저 주소창에 요청을 위해 입력했던 
+		//  전체 요청주소(URL)을 얻을수 있습니다.
+		
+		document.write(   location.href    );
+	
+/*		
+		//3초 휴식후  한번 function(){}이 호출되어 실행함   그리고 더이상 실행하지 않음 
+		setTimeout(function(){
+			//location객체의 href속성에  재요청할 사이트의 주소를 저장하면?
+			//- 웹브라우저 주소창에 자동으로 재요청할 사이트의 주소가 입력되어 
+			//  자동으로 엔터를 눌러 재요청하게 된다
+							//재요청할 주소 작성해서 href속서에 저장 ! 
+			location.href = "http://www.naver.com";
+		
+		},3000);
+*/		
+		//location객체에서 제공하는 reload()메소드
+		//- 현재 클라이언트가 보고 있는 화면(location.html)을 재요청하기 위해
+		//  자동으로 웹브라우저 주소창에 현재 보고 있는 화면(location.html)의 URL주소가
+		//  자동으로 입력되어 자동 재요청 하게 하는 기능의 메소드
+		//  요약 : F5번 누른 것과 같음
+		
+		//  location.reload();
+		
+		
+	
+	</script>
+
+
+
+</body>
+</html>
+

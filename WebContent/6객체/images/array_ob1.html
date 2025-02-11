@@ -152,6 +152,90 @@
    						  //  0   1   2   3   index
     //-----------------------------------------------------------------------
    		
+    //배열 객체 메모리가 제공하는 forEach()메소드
+    
+    	//- 배열 메모리에 저장된  전체 요소의 갯수만큼 반복하는데
+    	//  배열 메모리에 저장된 요소(데이터)를 하나씩 순회하면서 요소마다 콜백함수function을 호출하여 사용하는 메소드
+    	
+    	//문법
+    	/*
+    				배열명.forEach( function(현재 처리중인 배열 요소를 받을 매개변수(필수) , 
+    									      현재 처리 중인 요소의 index를 받을 매개변수, 
+    									   foreach메소드가 호출된 배열 자체를 받을 매개변수){
+    		
+    					 			반복 실행할 코드 작성 할 영역
+    		
+    		           }, thisValue);
+    	
+   			thisValue 자리에는  콜백함수 내부에서 this로 사용할 값 (선택)
+   			
+      -----------------------------------------------------------------------------------			
+   		  쉬운 간단한 문법
+   		  				배열명.forEach( function(매개변수){   반복시 구현할 코드 작성    }  );
+   			
+   		*/
+   		const arr3 = [10, 20, 30,  40];
+   		//			  0   1   2    3     index
+   		
+   		
+   			  arr3.forEach( function(value){
+   				  //function콜백함수의 매개변수 value로 전달 받는값
+   				  // arr3배열 메모리의  0 index위치 칸에 저장된 10부터
+   				  //                3 index위치 칸에 저자된 40까지의 값을
+   				  //			       차례대로 반복해서 얻어 출력
+   				  console.log(value);
+   				  
+   			  });
+   		
+  		//배열 복사 
+  		const numbers = [1, 2, 3];
+  		//				 0  1  2  index
+  		
+  		const copy = [];
+  		
+  		//numbers배열에 저장된 요소의 갯수만큼 function(num){} 이 자동으로 호출되어 
+  		//num매개변수로 받은 1, 2, 3 을 각각 차례대로  copy빈 배열에 추가해서 저장 시키자
+  		numbers.forEach(function(num){
+  								//1
+  								//2
+  								//3
+  			copy.push(num);// copy = [1,2,3];
+  		});
+  		
+  		console.log(copy);//[1,2,3]
+  		
+   		
+ //매개변수 2개를 사용 한경우 
+   		const fruits = ["apple", "banana",  "cherry"];
+   		//				  0          1         2        index
+   		
+   			fruits.forEach(function(item, index){
+   				
+   				console.log(`${index}: ${item}`); // "0 : apple"
+   												  // "1 : banana"
+   												  // "2 : cherry"												
+   			});
+
+  //매개변수 3개를 사용한 경우 (thisValue 사용)
+  
+  			const obj = {  
+	  					   multiplier:2,
+	  					   multiply:function(array){ //[1,2,3]	  						  		
+	  						   array.forEach(function(num){
+	  							   			  //1  *         2
+	  							   			  //2  *         2
+	  							   			  //3  *         2
+	  							   console.log(num * this.multiplier);
+	  							   
+	  						   },this);	   
+	  					   } 
+  						};
+   		
+  		   obj.multiply([1,2,3]);
+   		
+    	
+    
+    
 	
 	</script>		
 	
