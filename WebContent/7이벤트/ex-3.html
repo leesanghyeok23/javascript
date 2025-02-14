@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	<style>
+		/*id속성에 대한 값이 box인  <div>요소를 선택*/
+		#box{
+			width:200px;
+			height:200px;
+			border: 1px    solid   #222;	
+		}
+	</style>
+</head>
+<body>
+	<p>사각형 내부를 클릭해 보세요</p>
+	
+	<div id="box"></div>
+	
+	<script>
+		//id속성값이 box인 <div>요소를 선택해서 가져와  box상수메모리 만들어서 저장
+		const box = document.querySelector("#box");
+		
+		//event-6.html을 참고하여 사각형 영역에서 마우스를 움직일때,
+		//즉! mousemove이벤트가 발생 했을 때 이벤트의 발생 위치를 콘솔창에 보여주는 소스 작성해보세요
+		box.addEventListener("mousemove", (event) => {
+									  //event매개변수로 넘어오는 객체?
+									  //- 클릭이벤트가 발생한 <div></div>요소 자체의 정보를 지닌 이벤트객체
+			
+			console.log(`마우스 포인터 이동 이벤트가 발생 위치 : ${event.pageX}, ${event.pageY}`);
+			
+		});
+		
+	
+	</script>
+	
+	
+	
+
+</body>
+</html>
+
+
+

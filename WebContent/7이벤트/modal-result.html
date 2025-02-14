@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/modal-result.css">
+	
+</head>
+<body>
+	<button id="open">프로필 보기</button>
+
+	<div id="modal-box">
+		<div id="modal-contents">
+			<button id="close">&times;</button>
+			<h1 id="title">My Profile</h1>
+			<div id="profile">
+				<img src="images/pf.png" alt="도레미">
+				<div id="desc">
+					<p class="user">이름 : 도레미</p>
+					<p class="user">주소 : somewhere</p>
+					<p class="user">연락처 : 1234-5678</p>					
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		//프로필 보기 <button>선택
+		//<button id="open">프로필 보기</button>
+		const open = document.querySelector("#open");
+			
+		//모달 창 영역 <div id="modal-box">선택
+		const modalBox = document.querySelector("#modal-box");
+	
+		//모달 창 영역 오른쪽 상단 위쪽 X 디자인 <button id="close">&times;</button>
+		//닫기 버튼 선택
+		const close = document.querySelector("#close");
+	
+		//<button id="open">프로필 보기</button> 요소에 click이벤트 등록
+		open.addEventListener("click", () => {
+			
+			//클릭하면 classList속성에 add메소드를 사용해서 
+			//class=active 를  modalBox상수에 저장된 
+			//<div id="modal-box">...</div>에 추가 
+			modalBox.classList.add("active");
+			
+			
+		});
+		
+		//모달 영역 오른쪾 상단 위쪾 X 디자인 <button> 닫기 버튼 요소에 click이벤트 등록
+		close.addEventListener("click",  () => {
+			
+			//모달 영역 오른쪾 상단 위쪽 X <button>을 클릭하면
+			//<div id="modal-box" class="active"></div>모달 영역에서
+			//class속성에 대한 "active"값 제거 
+			modalBox.classList.remove('active');
+			
+		});
+	
+	
+	</script>
+	
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
